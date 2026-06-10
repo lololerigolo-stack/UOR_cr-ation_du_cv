@@ -1,0 +1,177 @@
+
+/* Importation de la font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+
+.logo-image {
+    width: 50px;/*hauteur de l'image */
+    height: 50px;/*largeur de l'image */
+    border-radius: 15px;/*arrondissement de l'image */
+}
+/*la nav_bar */
+.nav-links{
+    display: flex;/* déplacement libre dans le conteneur */
+    justify-content: center; /*centre les éléments dans le conteneur */
+    gap: 30px; /*écartement de 30 pixels entre les liens */
+    text-decoration: none;
+    color: #c9a84c; /*couleur or */
+
+
+}
+
+.navbar{
+    background-color: rgba(72, 61, 139, 0); /*Rendu de la nav en transparent */
+    position: fixed;  /* pour faire en sorte que la barre suive le scroll*/
+    z-index: 1000; /* pour que la barre reste devant */
+    width: 100%; /* garde une largeur de 100 % même avec la position fixed qui a tendance à transformer en width auto*/
+}
+
+.nav-links a{
+
+    text-decoration: none;
+    color: #c9a84c; /*couleur or */
+    font-size: 5rem;
+
+
+
+}
+
+body{
+
+    color: #ffffff;
+
+    text-shadow: 2px 1px 4px rgb(0, 0, 0);
+    font-family: 'Inter', sans-serif;
+    width: auto;
+    font-size: 3rem; 
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+    font-weight: 500; 
+
+}
+p, h1, H2, ul {
+    text-align: center;
+}
+
+/*image de profil floatante à gauche avec arrondie*/
+img.profil_lolo{
+    float: left;
+    border-radius: 250px;
+    align-items: center;
+    
+}
+
+.clear{
+    clear: left;
+}
+
+/* Mise en valeur des dates avec span*/
+.date1, .date2 {
+    color: #f90404;       
+    font-weight: bold;    
+}
+
+/* Styliser le tableau */
+
+table{
+    margin: 0 auto ; /*placement du tableau*/
+    background-color: rgb(54, 61, 69);
+}
+
+
+
+
+a:hover{
+    color: red;
+
+}
+
+
+
+/* Affichage d'une autre image dans le body de la page musculation*/
+
+.mon_musculation{
+    background-image:url("images/musculation.png") ;
+    width: auto;
+
+}
+
+.mon_natation{
+    background-image: url(images/natation.png);
+
+}
+
+.mon_sport_combat{
+    background-image: url(images/combat.png);
+}
+
+.mon_velo{
+    background-image: url(images/velo.png);
+}
+.cv{
+    background-image: url(images/image\ site.png);
+
+}
+
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+    
+    body {
+        width: 100%;
+        font-size: 1.2rem; /* réduit la taille du texte sur mobile */
+        margin: 0;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .nav-links {
+        flex-direction: column; /* empile les liens verticalement */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        
+
+    }
+
+    img.profil_lolo {
+        float: none; /* supprime le float */
+        display: block;
+        margin: 0 auto; /* centre l'image */
+    }
+
+    .clear {
+        clear: none;
+    }
+
+    table {
+        width: 100%;
+        font-size: 1rem;
+        width: 100%;
+        table-layout: fixed; /* les colonnes se partagent la largeur */
+        word-wrap: break-word; /* coupe les mots trop longs dans le tableau */
+    }
+    
+    img{
+        width: 100%;
+    }
+
+    table img{
+        max-width: 100%; /* l'image ne dépasse jamais son conteneur */
+        height: auto;
+    }
+
+    .nav-links{
+    padding: 0;       /* supprime le padding-left */
+
+}
+
+}
