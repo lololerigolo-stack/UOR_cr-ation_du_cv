@@ -113,9 +113,16 @@ a:hover{
     background-image: url(images/image\ site.png);
 
 }
-
-
-
+.mon_formulaire{
+    background-color: red;
+    background-image: url("images/image_fond_formulaire.png");
+    min-height: 100vh;
+    width: auto;
+}
+.form{
+    padding-top: 400px;
+    padding-left: 20%;
+}
 
 /* RESPONSIVE */
 @media screen and (max-width: 900px) {
