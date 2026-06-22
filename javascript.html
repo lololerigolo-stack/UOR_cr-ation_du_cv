@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr"> <!-- Langue française -->
+<head>
+    <meta charset="UTF-8"> <!-- Permet d'utiliser les accents, ç ... -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Balise pour le responsive -->
+    <meta name="description" content="Author: Logan TRACHEZ, Category: CV, Subject: Informatique, University: Paris 8, Location: Ville-Saint-Jacques">
+    <meta name="author" content="Logan TRACHEZ">
+    <meta name="keywords" content="CV, Logan TRACHEZ, informatique, Paris 8">
+    <title>MON CV</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien CSS -->
+</head>
+<body class="cv">
+
+    <!-- Barre de navigation -->
+    <nav class="navbar"> <!-- Création de la classe navbar pour le CSS -->
+        <div class="logo"> <img class="logo-image" src="images/logo site.png" alt="logo site"></div> <!-- La div pour mettre un logo sur notre site -->
+            <ul class="nav-links"> <!-- Les différentes pages de navigation -->
+                <a href="sport_combat.html">Sport de combat</a>
+                <a href="velo.html">Vélo</a>
+                <a href="natation.html">Natation</a>
+                <a href="musculation.html">Musculation</a>
+                <a href="Mon_formulaire.php">Formulaire</a>
+                <a href="Mon_cv.html">Mon CV</a>
+            </ul>
+    </nav>
+
+    <h1 id="titre">Curriculum vitae – Logan TRACHEZ</h1> <!-- Titre -->
+
+    <!-- Bouton pour changer la couleur du titre -->
+    <!-- Nous avons rajouté onclick pour lancer la fonction qui est une fonction JavaScript -->
+    <div style="text-align: center; padding-top: 120px;">
+        <button id="btn-clignotement" class="bouton" type="button">Changer la couleur du titre</button>
+    </div>
+
+    <img class="profil_lolo" src="images/screenshot001.png" alt="image de profil" width="300"> <!-- Image profil -->
+    <div class="clear"></div> <!-- Nous avons fait un clear left afin de faire passer les éléments sous l'image -->
+
+    <h2>Profil</h2>
+    <p>Je suis quelqu'un de <strong>curieux</strong>, <strong>motivé</strong>, <strong>rigoureux</strong>. Je m'adapte facilement et j'apprécie le travail en équipe.</p>
+
+    <h2>Formation</h2>
+    <p>J'ai obtenu mon baccalauréat STI2D en 2018 au <a href="https://www.vinci-melun.org">lycée Leonard de Vinci</a>.</p>
+
+    <h2>Expérience</h2>
+    <p><span class="date1">12/12/2020 :</span> j'ai effectué de l'intérim à partir de cette période. J'ai travaillé dans <strong>la maçonnerie, l'électricité ainsi que la métallurgie.</strong></p>
+    <p><span class="date2">12/12/2021</span> : j'ai commencé le métier à <a href="https://www.rivaacier.com/fr/qui_sommes-nous/riva_acier">la SAM de Montereau</a>. Ce poste me demandait de gérer une production,
+    de travailler en équipe (nous étions en rotation) et d'évoluer dans des conditions difficiles.
+    Manipuler des bobines sortant à 1200 °C avec un bruit constant, parfois avec des risques
+    (gants qui prennent feu, accrochages aux machines) m'a appris à travailler sous pression et
+    dans des environnements exigeants.</p>
+
+    <h2>Compétence</h2> <!-- Liste à points -->
+    <ul>
+        <li>Anglais : niveau correct</li>
+        <li>Allemand : niveau faible</li>
+        <li>Français : langue courante</li>
+        <li>Langages de programmation : Python, HTML, CSS, JavaScript</li>
+    </ul>
+
+    <h2>Centres d'intérêt</h2>
+    <table border="1"> <!-- Création du tableau -->
+        <caption> <!-- Titre du tableau -->
+            Mes centres d'intérêts
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col">Sport</th>
+                <th scope="col">Vélo</th>
+                <th scope="col"><a href="https://taikiblog77.wordpress.com">Sport de combat</a></th>
+                <th scope="col"><a href="https://www.ccmsl.fr/vivre-a-msl/sports/centre-aquatique-du-grand-jardin.html">Natation</a></th>
+                <th scope="col"><a href="https://www.fitnesspark.fr/club/varennes-sur-seine/">Musculation</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Voyage</th>
+                <td>ALLEMAGNE</td>
+                <td>EGYPTE</td>
+                <td>ESPAGNE</td>
+                <td>Montagne</td>
+            </tr>
+            <tr>
+                <th scope="row">Animaux</th>
+                <td><img src="images/newton.jpg" alt="image chiens" width="300"></td> <!-- Dimension de l'image en px -->
+                <td><img src="images/screenshot002.png" alt="" width="300"></td>
+                <td><img src="images/screenshot003.png" alt="" width="300"></td>
+                <td><img src="images/screenshot004.png" alt="" width="300"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Chrono — placé en dehors du tableau -->
+    <div id="timer-bloc">
+    <input type="number" id="input_temps" placeholder="Secondes...">
+    <div id="affichage-timer"></div>
+    <div id="boutons-timer">
+        <button class="bouton" onclick="start()">Start</button>
+        <button class="bouton" onclick="stop()">Stop</button>
+        <button class="bouton" onclick="reset()">Reset</button>
+    </div>
+</div>
+
+    <h2>Mon histoire</h2>
+    <p>Après l'obtention de mon baccalauréat STI2D avec mention assez bien, j'ai choisi de travailler deux années à la SAM de Montereau.
+    À cette époque, je ne me tournais pas vers les études, car ma passion pour le sport occupait toute mon énergie. Un problème de santé m'a ensuite conduit à une longue période de rééducation,
+    dont trois années en fauteuil roulant. Cette étape difficile m'a poussé à prendre du recul et m'a permis de me tourner vers l'informatique,
+    un univers que je ne connaissais pas encore mais qui a rapidement éveillé ma curiosité.
+    J'ai commencé à me former seul, d'abord en découvrant le HTML, le CSS et le Java, puis en me spécialisant dans le Python.
+    Au fil du temps, j'ai réalisé plusieurs projets personnels, comme une calculatrice multiplateforme avec Kivy,
+    et j'apprends aujourd'hui à utiliser Flask pour intégrer des API et créer des applications web.
+    Les intelligences artificielles comme ChatGPT ou GenSpark m'accompagnent également dans ce parcours,
+    non seulement comme des outils, mais comme de véritables soutiens dans mon apprentissage quotidien.
+    À l'origine, mon souhait d'aider les autres m'avait orienté vers une carrière dans les forces de l'ordre.
+    Aujourd'hui, cette volonté reste la même, mais je souhaite à l'avenir l'exprimer à travers l'informatique,
+    en mettant mes compétences au service de projets technologiques, sociaux et médicaux.
+    Je me suis rendu compte que non seulement les personnes sur le terrain, comme les pompiers ou les policiers,
+    sauvent des vies, mais aussi les scientifiques et les ingénieurs en contribuant à améliorer le quotidien de chacun.</p>
+
+    <!-- tableau de recepetion des données : -->
+    <table id="tableau-velib-bloc">
+    <thead>
+        <tr><th>Station</th><th>Vélos dispo</th><th>Mécaniques</th><th>Électriques</th></tr>
+    </thead>
+    <tbody id="tableau-velib"></tbody>
+
+</table>
+
+
+    <h2>Contact</h2>
+    <ul>
+        <li>ADRESSE : Ville-Saint-Jacques 4 c rue grande 77130</li>
+        <li>PORTABLE : 0629265155</li>
+        <li>logan.trachez7@gmail.com</li>
+    </ul>
+
+    <!-- Script JavaScript placé en bas du body pour que tous les éléments HTML soient chargés avant son exécution -->
+    <script>
+        let intervalle;
+
+        // Stocke le bouton de changement de couleur dans une variable
+        var btn = document.getElementById("btn-clignotement");
+
+        // Fonction qui génère un nombre aléatoire entre 0 et number
+        function random(number) {
+            return Math.floor(Math.random() * (number + 1));
+        }
+
+        // Au clic sur le bouton, change la couleur du titre avec une couleur RGB aléatoire
+        btn.onclick = function () {
+            var rndCol = "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+            // Applique la couleur aléatoire sur le h1
+            document.getElementById("titre").style.color = rndCol;
+        };
+
+        // Partie chrono
+        // Variable qui stocke le temps restant
+        let temps = 100;
+        // Récupère l'élément timer via son id
+        const timerElement = document.getElementById("affichage-timer");
+
+        // Fonction qui diminue le temps d'une seconde à chaque appel
+        function diminuer() {
+            // Empêche temps de passer sous zéro et réduit de 1
+            temps = temps <= 0 ? 0 : temps - 1;
+            // Affiche la nouvelle valeur de temps
+            timerElement.innerText = temps;
+        }
+
+        // Fonction qui démarre le chrono
+        function start() {
+            // Récupère la valeur entrée par l'utilisateur et la convertit en entier
+            temps = parseInt(document.getElementById("input_temps").value);
+            // Évite de lancer plusieurs setInterval en même temps
+            clearInterval(intervalle);
+            // Lance la fonction diminuer toutes les secondes (1000 ms)
+            intervalle = setInterval(diminuer, 1000);
+        }
+
+        // Fonction qui met le chrono en pause
+        function stop() {
+            clearInterval(intervalle);
+        }
+
+        // Fonction qui remet le chrono à zéro
+        function reset() {
+            clearInterval(intervalle);       // Arrête le chrono
+            temps = 100;                     // Remet la variable à 100
+            timerElement.innerText = 0;    // Affiche 100
+            document.getElementById("input_temps").value = ""; // Vide l'input
+        }
+
+        // récupération du tbody
+        const result = document.getElementById("tableau-velib")
+
+        // affichage de la reponse du body avec la methode response.json
+        fetch("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/velib-disponibilite-en-temps-reel/records?limit=20")
+            .then(response => {
+                    return response.json()
+                })
+                // affichage du json avec le console.log
+            .then((json) => {
+                console.log(json)
+                for (const station of json.results){ //récupération des données pour chaque élément grâce a la boucle.
+                    const element = 
+                        document.createElement("tr") //création d'une ligne de tableau 
+                        element.innerHTML = 
+                            //chaque td correspond à une colonne du tableau.
+                            "<td>" + station.name + "</td>" + //nom de la station
+                            "<td>" + station.numbikesavailable + "</td>" + // vélo disponible
+                            "<td>" + station.mechanical + "</td>" + //vélo mécanique
+                            "<td>" + station.ebike + "</td>"; //vélo electrique
+                        //ensuite on ajoute au tableau
+                        result.appendChild(element)
+                }
+            })
+    </script>
+
+</body>
+</html>

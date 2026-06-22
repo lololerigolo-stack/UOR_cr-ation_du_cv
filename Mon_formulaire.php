@@ -19,6 +19,7 @@
                 <a href="natation.html">Natation</a>
                 <a href="Mon_cv.html">Mon CV</a>
                 <a href="musculation.html">Musculation</a>
+                <a href="javascript.html">page java</a>
             </ul>
     </nav>
     <!-- Formulaire -->
